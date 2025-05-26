@@ -22,6 +22,8 @@ import { selectedMenu } from "@/data/data"
 
 // export default RecipePage
 
+import { pastryMenu } from "@/data/data";
+
 type Props = {
     params: {
       pastry: string;
@@ -32,3 +34,8 @@ type Props = {
     return <div>Pastry: {params.pastry}</div>;
   }
   
+  export async function generateStaticParams() {
+    return pastryMenu.map((item) => ({
+      pastry: item.name.toLowerCase(),
+    }));
+  }
