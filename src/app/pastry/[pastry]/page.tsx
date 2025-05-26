@@ -1,10 +1,9 @@
 import { selectedMenu } from "@/data/data"
 import { PastryType } from "@/types/type";
 
-type ParamsProp = { params: { pastry: string } };
-
-export default async function RecipePage ({params}: ParamsProp) { 
-    const pastry =  decodeURIComponent (params.pastry);
+type ParamsProp = Promise<{ pastry: string }>;
+export default async function RecipePage ({params}: {params:ParamsProp}) { 
+    const {pastry} =  await params;
        const selectedPastry : PastryType | undefined = selectedMenu(pastry) 
        console.log(pastry)
        console.log(selectedPastry) 
