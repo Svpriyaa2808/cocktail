@@ -1,7 +1,7 @@
 import { selectedMenu } from "@/data/data"
 
-const RecipePage = async ({params}: {params:{pastry:string}}) =>{ 
-    const pastry = await decodeURIComponent(params.pastry);
+const RecipePage =  ({params}: {params:{pastry:string}}) =>{ 
+    const pastry =  decodeURIComponent(params.pastry);
 
         // const slugify = (text: string):string => {
         //     return text.toLowerCase().replace(/\s+/g, '-')           // Replace spaces with -       // Remove all non-word chars
