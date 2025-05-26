@@ -5,7 +5,7 @@ export default function Home() {
 
   return (
     <Container>
-      hi from develop
+      hi from develop vercel
     </Container>
   );
 }
