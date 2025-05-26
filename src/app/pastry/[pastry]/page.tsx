@@ -28,7 +28,7 @@ type Props = {
     };
   };
   
-  export default function Page({ params }: Props) {
+  export default async function Page({ params }: Props) {
     return <div>Pastry: {params.pastry}</div>;
   }
   
